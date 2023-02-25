@@ -15,7 +15,7 @@ export class ProductsListComponent implements OnInit {
 	readonly products$ = this.productsStoreService.products$;
 
 	filterValue: any;
-	filterName = '';
+	filterName = 'Мышь проводная SteelSeries';
 
 	constructor(
 		// @Inject(ChangeDetectorRef) private changeDetectorRef: ChangeDetectorRef,

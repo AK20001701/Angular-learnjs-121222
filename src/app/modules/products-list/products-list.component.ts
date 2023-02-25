@@ -20,4 +20,17 @@ export class ProductsListComponent implements OnInit {
 		console.log('calc');
 		return this.products;
 	}
+
+	onLoadDataEvent(loadDirection: string) {
+		if (loadDirection.toLocaleLowerCase() === 'up') {
+			setTimeout(() => {
+				this.products?.unshift(...productsMock);
+			}, 20000);
+		}
+		if (loadDirection.toLocaleLowerCase() === 'down') {
+			setTimeout(() => {
+				this.products?.push(...productsMock);
+			}, 20000);
+		}
+	}
 }

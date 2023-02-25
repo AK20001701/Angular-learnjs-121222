@@ -25,12 +25,12 @@ export class ProductsListComponent implements OnInit {
 		if (loadDirection.toLocaleLowerCase() === 'up') {
 			setTimeout(() => {
 				this.products?.unshift(...productsMock);
-			}, 20000);
+			}, 1000);
 		}
 		if (loadDirection.toLocaleLowerCase() === 'down') {
 			setTimeout(() => {
 				this.products?.push(...productsMock);
-			}, 20000);
+			}, 1000);
 		}
 	}
 }

@@ -13,10 +13,11 @@
 			let selectIndex = selectIndex
 		"
 	> -->
-	<!-- посложнее
-		<ng-container
+	<!-- посложнее -->
+	<ng-container
 		*appPagination="
-			let productsGroup of (products | filterByParam : this.filterValue : 'rating');
+			let productsGroup of products
+				| filterByParam : this.filterParamName : this.filterParamValue;
 			elementsSize: 4;
 			let allIndexes = allIndexes;
 			let activeIndex = index;
@@ -24,9 +25,9 @@
 			let back = back;
 			let selectIndex = selectIndex
 		"
-	> -->
-	<!-- попроще  -->
-	<ng-container
+	>
+		<!-- попроще  -->
+		<!-- <ng-container
 		*appPagination="
 			let productsGroup of products
 				| filterProductByName : this.filterName;
@@ -37,7 +38,7 @@
 			let back = back;
 			let selectIndex = selectIndex
 		"
-	>
+	> -->
 		<div class="card-container">
 			<app-product-card
 				*ngFor="

@@ -14,7 +14,9 @@ export class ProductsListComponent implements OnInit {
 	// readonly productsStoreService = new ProductsStoreService();
 	readonly products$ = this.productsStoreService.products$;
 
-	filterValue: any;
+	filterParamName = 'subCategory';
+	filterParamValue = 'televizory-i';
+
 	filterName = 'Мышь проводная SteelSeries';
 
 	constructor(
